@@ -1,0 +1,6 @@
+<div class="card">
+  <h2>Connexion</h2>
+  <input type="text" placeholder="Entrez votre prénom" [(ngModel)]="prenom"/>
+  <button (click)="toggleLogin()">Se connecter</button>
+  <p *ngIf="isLoggedIn">Bienvenue, {{ prenom }} !</p>
+</div>

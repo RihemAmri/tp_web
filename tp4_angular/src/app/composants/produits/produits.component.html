@@ -1,0 +1,9 @@
+<div class="card">
+  <h2>Produits</h2>
+  <ul>
+    <li *ngFor="let produit of produits"
+        [ngStyle]="{color: produit.stock > 50 ? 'green' : produit.stock >= 20 ? 'orange' : 'red'}">
+      {{ produit.nom }} - Stock : {{ produit.stock }}
+    </li>
+  </ul>
+</div>

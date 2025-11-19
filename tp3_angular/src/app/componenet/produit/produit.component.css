@@ -1,0 +1,33 @@
+.card {
+  width: 220px;
+  padding: 15px;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  background: #f0f9ff;
+}
+
+img {
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+button {
+  margin: 5px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4f46e5;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #4338ca;
+}
+
+.hors-stock {
+  opacity: 0.6;
+}

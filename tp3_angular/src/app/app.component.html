@@ -1,0 +1,16 @@
+<h1>TP3 Angular </h1>
+
+<!-- Bienvenue -->
+<app-bienvenue></app-bienvenue>
+
+<!-- Utilisateur -->
+<app-utilisateur></app-utilisateur>
+
+<!-- Produit avec @Output pour le panier -->
+<app-produit 
+  [nomProduit]="'Super Chaussure'" 
+  (ajoutPanier)="ajouterAuPanier($event)">
+</app-produit>
+
+<!-- Panier -->
+<app-panier [message]="messagePanier"></app-panier>

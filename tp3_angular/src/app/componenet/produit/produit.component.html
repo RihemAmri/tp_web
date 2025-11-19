@@ -1,0 +1,10 @@
+<div class="card" [class.hors-stock]="!enStock">
+  <h3>{{ nomProduit }}</h3>
+  <img [src]="imageUrl" alt="{{ nomProduit }}" width="200" />
+  <p>Prix : {{ prix | currency:'USD':'symbol' }}</p>
+  <p [style.color]="enStock ? 'green' : 'red'">
+    {{ enStock ? 'En stock' : 'Rupture de stock' }}
+  </p>
+  <button (click)="afficherAlerte()">Ajouter au panier</button>
+  <button (click)="toggleStock()">Changer Stock</button>
+</div>

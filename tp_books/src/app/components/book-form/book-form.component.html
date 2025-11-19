@@ -1,0 +1,48 @@
+<form #bookForm="ngForm" (ngSubmit)="onSubmit(bookForm)">
+  <label>Title:</label>
+  <input type="text" name="title" id="title" [(ngModel)]="currentBook.title" required minlength="3" class="form-control">
+  <div *ngIf="bookForm.controls['title']?.invalid && bookForm.controls['title']?.dirty" class="error">
+    Title required (min 3 chars) & cannot be only digits
+  </div>
+
+  <label>Author:</label>
+  <input type="text" name="author" id="author" [(ngModel)]="currentBook.author" required minlength="3" class="form-control">
+  <div *ngIf="bookForm.controls['author']?.invalid && bookForm.controls['author']?.dirty" class="error">
+    Author required (min 3 chars)
+  </div>
+
+  <label>Publisher Email:</label>
+  <input type="email" name="publisherEmail" id="publisherEmail" [(ngModel)]="currentBook.publisherEmail" required class="form-control">
+  <div *ngIf="bookForm.controls['publisherEmail']?.invalid && bookForm.controls['publisherEmail']?.dirty" class="error">
+    Valid email required
+  </div>
+
+  <label>Publisher Phone:</label>
+  <input type="text" name="publisherPhone" id="publisherPhone" [(ngModel)]="currentBook.publisherPhone" pattern="^[0-9]{8}$" class="form-control">
+  <div *ngIf="bookForm.controls['publisherPhone']?.invalid && bookForm.controls['publisherPhone']?.dirty" class="error">
+    Phone must be 8 digits
+  </div>
+
+  <label>Release Date:</label>
+  <input type="date" name="releaseDate" id="releaseDate" [(ngModel)]="currentBook.releaseDate" required class="form-control">
+  <div *ngIf="bookForm.controls['releaseDate']?.invalid && bookForm.controls['releaseDate']?.dirty" class="error">
+    Release Date required
+  </div>
+
+  <label>Category:</label>
+  <select name="category" id="category" [(ngModel)]="currentBook.category" required class="form-control">
+    <option value="">--Select--</option>
+    <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
+  </select>
+  <div *ngIf="bookForm.controls['category']?.invalid && bookForm.controls['category']?.dirty" class="error">
+    Category required
+  </div>
+
+  <label>Available:</label>
+  <input type="checkbox" name="isAvailable" [(ngModel)]="currentBook.isAvailable">
+
+  <label>Stock:</label>
+  <input type="number" name="stock" [(ngModel)]="currentBook.stock" min="0" class="form-control">
+
+  <button type="submit">{{ currentBook.id ? 'Update' : 'Add' }}</button>
+</form>

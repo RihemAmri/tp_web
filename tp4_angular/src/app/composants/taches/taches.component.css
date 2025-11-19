@@ -1,0 +1,6 @@
+.card { width: 400px; margin: 20px auto; padding: 20px; text-align: center; border-radius: 12px; background: #f0f0f0; }
+ul { list-style: none; padding: 0; }
+li { padding: 4px; margin-bottom: 4px; font-weight: bold; }
+.completed { text-decoration: line-through; }
+button { margin-left: 10px; padding: 4px 8px; border-radius: 6px; border: none; cursor: pointer; background-color: #2196F3; color: white; }
+button:hover { background-color: #1976D2; }

@@ -1,0 +1,14 @@
+<h1>Book Catalog</h1>
+<app-book-form 
+  [categories]="categories" 
+  [book]="selectedBook" 
+  (saveBook)="addBook($event)">
+</app-book-form>
+
+<app-book-list 
+  [books]="books" 
+  (edit)="editBook($event)" 
+  (delete)="deleteBook($event)">
+</app-book-list>
+
+<p>Total books: {{ books.length }}</p>

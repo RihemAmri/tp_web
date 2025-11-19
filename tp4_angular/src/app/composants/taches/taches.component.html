@@ -1,0 +1,15 @@
+<div class="card">
+  <h2>Gestion des tâches</h2>
+
+  <p *ngIf="taches.length === 0; else tachesExistantes">Vous n'avez pas de tâches en cours</p>
+  <ng-template #tachesExistantes>
+    <ul>
+      <li *ngFor="let tache of taches"
+          [ngClass]="{'completed': tache.statut}"
+          [ngStyle]="{color: tache.priorite === 'haute' ? 'red' : tache.priorite === 'moyenne' ? 'orange' : 'green'}">
+        {{ tache.description }}
+        <button (click)="toggleStatut(tache)">Changer statut</button>
+      </li>
+    </ul>
+  </ng-template>
+</div>

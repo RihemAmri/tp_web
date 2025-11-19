@@ -1,0 +1,6 @@
+.card { width: 800px; margin: 20px auto; padding: 20px; border-radius: 12px; background: #f0f0f0; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 6px; border: 1px solid #ccc; text-align: center; }
+button { padding: 4px 8px; margin: 2px; border-radius: 6px; border: none; cursor: pointer; background-color: #2196F3; color: white; }
+button:hover { background-color: #1976D2; }
+input, select { padding: 4px; margin: 4px; border-radius: 6px; }

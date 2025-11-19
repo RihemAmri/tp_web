@@ -1,0 +1,17 @@
+<div class="card">
+  <h2>Articles</h2>
+  <input type="text" placeholder="Titre" [(ngModel)]="nouveauTitre"/>
+  <input type="text" placeholder="Contenu" [(ngModel)]="nouveauContenu"/>
+  <select [(ngModel)]="nouvelleImportance">
+    <option value="faible">Faible</option>
+    <option value="moyenne">Moyenne</option>
+    <option value="élevée">Élevée</option>
+  </select>
+  <button (click)="ajouterArticle()">Ajouter</button>
+
+  <ul>
+    <li *ngFor="let article of articles" [ngClass]="article.importance">
+      <strong>{{ article.titre }}</strong> - {{ article.contenu }}
+    </li>
+  </ul>
+</div>
