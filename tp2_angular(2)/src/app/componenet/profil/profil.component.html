@@ -1,0 +1,17 @@
+<h3>Formulaire Profil</h3>
+
+<form>
+  <label>Prénom :</label>
+  <input [(ngModel)]="utilisateur.prenom" name="prenom" />
+
+  <br><br>
+
+  <label>Âge :</label>
+  <input type="number" [(ngModel)]="utilisateur.age" name="age" />
+</form>
+
+<br>
+
+<h4>Valeurs en temps réel :</h4>
+<p>Prénom : {{ utilisateur.prenom }}</p>
+<p>Âge : {{ utilisateur.age }}</p>

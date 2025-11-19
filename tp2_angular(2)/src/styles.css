@@ -1,0 +1,27 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background: #e8eaf1;
+  height: 100vh;
+  margin: 0;
+
+  /* CENTRER TOUT LE CONTENU */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding-top: 40px;
+}
+
+app-root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centre TOUT */
+}
+
+h1 {
+  color: #1e1b4b;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+}

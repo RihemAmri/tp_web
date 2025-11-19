@@ -1,0 +1,12 @@
+p {
+  background: #e0e7ff;
+  padding: 12px 18px;
+  border-radius: 10px;
+  color: #1e1b4b;
+  border-left: 4px solid #4338ca;
+  font-weight: 500;
+  width: fit-content;
+
+  /* centrer */
+  margin: auto;
+}

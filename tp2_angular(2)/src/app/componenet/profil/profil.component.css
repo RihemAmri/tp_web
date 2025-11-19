@@ -1,0 +1,45 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  width: 300px;
+
+  /* centrer */
+  margin: auto;
+}
+
+label {
+  font-weight: 500;
+  color: #333;
+}
+
+input {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: 0.2s;
+}
+
+input:focus {
+  border-color: #4f46e5;
+  outline: none;
+  box-shadow: 0 0 4px #4f46e555;
+}
+
+h3, h4 {
+  color: #4f46e5;
+  text-align: center;
+}
+
+p {
+  font-size: 1rem;
+  margin: 4px 0;
+
+  /* centrer le texte */
+  text-align: center;
+}
